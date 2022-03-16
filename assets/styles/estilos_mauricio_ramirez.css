@@ -65,4 +65,28 @@ section {
     gap: 3rem;
 }
 
+/* apunta sólo a los header que son hijos directos de section */
+section>header {
+    /* esta sección se extenderá 12 columnas. */
+    grid-column: span 12;
+}
+
+/* apunta sólo a los main */
+section>main {
+    /* esta sección se extenderá 8 columnas. */
+    grid-column: span 8;
+}
+
+/* apunta sólo a los aside */
+section>aside {
+    /* esta sección se extenderá 4 columnas. */
+    grid-column: span 4;
+}
+
+/* apunta sólo a los footer */
+section>footer {
+    /* esta sección se extenderá 12 columnas. */
+    grid-column: span 12;
+}
 /* Termina grid */
+
