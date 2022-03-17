@@ -90,3 +90,19 @@ section>footer {
 }
 /* Termina grid */
 
+/*selecciona el <ul> que es hijo de nav*/
+nav>ul {
+    /*despliégalo  como flex*/
+    display: flex;
+    /*alinea sus elementos al centro*/
+    align-items: center;
+    /*justifica sus elementos con espacio igual entre ellos y con sus bordes izquierdo y derecho*/
+    justify-content: space-around;
+    /*añade un borde inferior*/
+    border-bottom: 1px solid #fff;
+    /*aumenta el espacio entre los elementos y el borde <ul>*/
+    padding-bottom: 0.5rem;
+
+    justify-content: space-between;
+}
+
