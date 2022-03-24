@@ -28,7 +28,16 @@ nav>ul>li>a {
 /*footer del blog*/
 
 #footer_blog{
+    display: flex;
     padding: 2rem;
+    /*alinea sus elementos al centro*/
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    font-size: 1.3rem;
 }
 
 footer{
@@ -103,6 +112,12 @@ nav>ul {
     /*aumenta el espacio entre los elementos y el borde <ul>*/
     padding-bottom: 0.5rem;
 
-    justify-content: space-between;
+    justify-content: space-between;    
+    
+}
+/*2do div del #footer_blog */
+#footer_blog div:nth-child(2) {
+    /*texto del rem a .9*/
+    font-size: 0.9rem;
 }
 
