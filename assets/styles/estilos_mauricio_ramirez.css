@@ -1,55 +1,120 @@
-/*clases generales*/
-
-body{ background-color:black;
-    color:#FFFFFF;
-}
-article{ color:rgb(241, 236, 236);padding: 1.5rem;
-    border-bottom: #FFFFFF 1px solid;
-}
-#titulo_del_blog{ text-align: center;
-    font-size: 3rem;
-    color:white;
+body {
+    background-color: black;
+    color: #fff;
 }
 
-/*terminan clases generales*/
-
-/*barra de navegación*/
-.resaltado{ color:yellow;
+/* grid */
+section {
+    display: grid;
+    grid-template-columns: repeat(12fr);
+    gap: 3rem;
+    margin: 0 1rem;
 }
 
-nav>ul>li { list-style: none;
-}
-nav>ul>li>a {
-    text-decoration: none;
+main {
+    grid-column: span 8;
 }
 
-/*termina barra de navegación*/
+section>header {
+    grid-column: span 12;
+}
 
-/*footer del blog*/
+aside {
+    grid-column: span 4;
+}
 
-#footer_blog{
+footer {
+    grid-column: span 12;
+}
+
+/* Termina grid */
+
+/* articles */
+article {
+    background-color: rgb(44, 43, 43);
+    padding: 1.5rem;
+    border-bottom: 1px solid #fff;
+}
+
+article>header>hgroup {
     display: flex;
-    padding: 2rem;
-    /*alinea sus elementos al centro*/
     align-items: center;
     justify-content: space-between;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    padding-left: 0rem;
-    padding-right: 0rem;
+}
+
+article>header>hgroup>h2 {
+    display: flex;
+    align-items: center;
+}
+
+article>header>hgroup>h2>img {
+    margin-right: 1rem;
+}
+
+/* fin articles */
+
+
+
+#titulo_del_blog {
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+/* barra de navegación */
+nav {
     font-size: 1.3rem;
 }
 
-footer{
-    color:#FFFFFF;
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-/*termina footer del blog*/
+#principal {
+    color: yellow;
+}
 
-/*ilustraciones*/
+nav>ul>li {
+    list-style: none;
+}
 
-.ilustracion{
-    border: white 4px solid;
+nav>ul>li>a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav>ul>li>a:hover {
+    text-decoration: underline;
+    color: greenyellow;
+}
+
+
+/* fin barra de navegación */
+
+/* footer del blog */
+#footer_blog {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem;
+    padding: 4rem 0;
+
+    font-size: 1.3rem;
+}
+
+#footer_blog div:nth-child(2) {
+    font-size: 0.9rem;
+}
+
+/* fin del footer del blog */
+
+/* ilustraciones */
+
+.ilustracion {
+    display: inline-block;
+    border: 4px solid #fff;
 }
 
 .ilustracion figcaption {
@@ -58,66 +123,40 @@ footer{
     font-style: italic;
 }
 
-/*fin de ilustraciones*/
+/* fin ilustraciones */
 
-
-/* grid */
-section {
-    
-    /* despliégate como  grid */
-    display: grid;
-    /* Crea 12 columnas cada una de una fracción usando la función repeat*/
-    grid-template-columns: repeat(12, 1fr);
-    /* deja que las filas(renglones) ocupen el alto que necesitan */
-    grid-auto-rows: auto;
-    /* añade un espacio entre los elementos del grid de 3rem */
-    gap: 3rem;
+/* aside */
+aside h2 {
+    font-size: 1.3 rem;
+    text-align: center;
 }
 
-/* apunta sólo a los header que son hijos directos de section */
-section>header {
-    /* esta sección se extenderá 12 columnas. */
-    grid-column: span 12;
-}
-
-/* apunta sólo a los main */
-section>main {
-    /* esta sección se extenderá 8 columnas. */
-    grid-column: span 8;
-}
-
-/* apunta sólo a los aside */
-section>aside {
-    /* esta sección se extenderá 4 columnas. */
-    grid-column: span 4;
-}
-
-/* apunta sólo a los footer */
-section>footer {
-    /* esta sección se extenderá 12 columnas. */
-    grid-column: span 12;
-}
-/* Termina grid */
-
-/*selecciona el <ul> que es hijo de nav*/
-nav>ul {
-    /*despliégalo  como flex*/
+aside div {
     display: flex;
-    /*alinea sus elementos al centro*/
     align-items: center;
-    /*justifica sus elementos con espacio igual entre ellos y con sus bordes izquierdo y derecho*/
-    justify-content: space-around;
-    /*añade un borde inferior*/
-    border-bottom: 1px solid #fff;
-    /*aumenta el espacio entre los elementos y el borde <ul>*/
-    padding-bottom: 0.5rem;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0.6rem;
+    border-bottom: 1px dashed #fff;
+}
 
-    justify-content: space-between;    
-    
+/* end media */
+
+
+aside div img {
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
-/*2do div del #footer_blog */
-#footer_blog div:nth-child(2) {
-    /*texto del rem a .9*/
-    font-size: 0.9rem;
+
+aside div:nth-child(2n) {
+
+    background-color: rgb(44, 43, 43);
 }
+
+/* fin aside */
 
