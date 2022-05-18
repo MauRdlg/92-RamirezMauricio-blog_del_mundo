@@ -13,30 +13,24 @@ section {
 }
 
 @media (min-width: 1024.1px) {
-main {
+section>main {
     grid-column: span 8;
 }
 }
 
-main {
-    grid-column: span 12;
-}
 
 section>header {
     grid-column: span 12;
 }
 
 @media (min-width: 1024.1px) {
-aside {
+    section>aside {
     grid-column: span 4;
 }
 }
 
-aside {
-    grid-column: span 12;
-}
 
-footer {
+section>footer {
     grid-column: span 12;
 }
 
@@ -71,7 +65,7 @@ article>header>hgroup>h2>img {
 #titulo_del_blog {
     text-align: center;
     font-size: 3rem;
-    margin-top: 6rem;
+    margin-top: 10rem;
 }
 
 
